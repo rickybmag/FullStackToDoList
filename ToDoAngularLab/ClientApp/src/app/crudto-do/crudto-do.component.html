@@ -1,0 +1,16 @@
+<div style="border: 1px solid black;" *ngFor="let t of todos; let i =index">
+
+  <div id="display{{t.id}}">
+    <p>Id: {{t.id}}</p>
+    <p>Task Name: {{t.name}}</p>
+    <p>Task Description: {{t.description}}</p>
+    <p>Is Task Completed: {{t.completed}}</p>
+
+    <button (click)="DeleteToDo(t.id,i)">Delete To Do Item</button>
+  </div>
+
+  <app-update-to-do id="update{{t.id}}" style="display:none;" [Id]=t.id></app-update-to-do>
+  <button (click)="UpdateToDo(t.id)">Update {{t.name}}</button>
+</div>
+
+<app-create-to-do></app-create-to-do>

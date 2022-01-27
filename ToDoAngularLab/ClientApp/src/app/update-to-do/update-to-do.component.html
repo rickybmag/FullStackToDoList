@@ -1,0 +1,18 @@
+<h2>Update {{todo.name}} from the task list</h2>
+
+<p>Name</p>
+<input type="text" id="Name{{id}}" value="{{todo.name}}" />
+<br />
+
+<p>Description</p>
+<input type="text" id="Description{{id}}" value="{{todo.description}}" />
+<br />
+
+<p>Is Task Completed</p>
+<select id="Completed{{id}}" value="{{todo.completed}}">
+  <option value="true">True</option>
+  <option value="false">False</option>
+</select>
+<br />
+
+<button (click)="UpdateTodo()">Submit Task</button>
